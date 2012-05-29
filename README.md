@@ -1,4 +1,4 @@
-brandonfoltz_WP
+brandonfoltz_wp
 ===============
 
 Wordpress theme for brandonfoltz.com
