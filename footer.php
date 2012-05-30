@@ -9,6 +9,6 @@
 		<p class="legal">(c) 2011 <a href="http://www.brandonfoltz.com">Brandon Foltz</a></p>
 	</div>
 </div> <!-- end of footer -->
-
+<? wp_footer() ?>
 </body>
 </html>

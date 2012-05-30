@@ -130,8 +130,8 @@ img.right {
 	float: left;
 	width: 960px;
 	height: 54px;
-	padding-left: 0px;
 	background: url(img/nav960.png) no-repeat left top;
+	padding: 10px 0px 0px 0px;
 }
 
 #navigation ul {
@@ -149,9 +149,9 @@ img.right {
 #navigation a {
 	/*display: block;*/
 	float: left;
-	margin-right: 16px;
+	margin-right: 0px;
 	margin-left: 16px;
-	padding: 10px 0px;
+	/*padding: 10px 0px;*/
 	text-decoration: none;
 	/*text-transform: lowercase;*/
 	font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -205,9 +205,9 @@ img.right {
 	color: #CCCCCC;
 }*/
 
-/*.post .entry {
-	padding: 0 16px;
-}*/
+.post .entry {
+	padding: 4px 0 0 0;
+}
 
 /*
 .post h1, h2, h3 {
@@ -226,7 +226,7 @@ img.right {
 	color: #CCCCCC;
 }*/
 
-.post .meta {
+/*.post .meta {
 	margin-left: 0px;
 	margin-right: 0px;
 	padding: 12px 0px 36px 0px;
@@ -260,23 +260,27 @@ img.right {
 
 .post .meta b {
 	display: none;
+} */
+
+/* new post css */
+
+.post p {
+	margin-bottom: 4px;
 }
 
-/* news section */
-
-.news {
-	/*margin-bottom: 12px;*/
-}
-
-.news .newstitle {
+.post .title h2 {
 	margin-bottom: 0px;
 }
 
-.news .byline {
+.post .meta {
 	color: #999999;
 	margin: 0px;
 	display: inline;
 	font-size: 12px;
+}
+
+.post .footer {
+	margin: 8px 0 8px 0;
 }
 
 /* other stuff */
@@ -301,8 +305,7 @@ ul.no-dot {
 }
 
 .separator {
-	padding-top: 4px;
-	padding-bottom: 4px;
+	margin: 16px 16px 8px 16px;
 	border-top: 1px dashed #333333;
 }
 
@@ -458,6 +461,18 @@ input, textarea, select {
 	padding: 0px;
 }
 
+.clearer {
+	clear: both;
+}
+
+.loginout-link {
+	height: 20px;
+	float: right;
+	padding-left: 0px;
+	border-left: 1px solid #333333;
+	padding-right: 16px;
+}
+
 /*Wrappers for page encapsulation images*/
 
 #wrap {
@@ -471,4 +486,6 @@ input, textarea, select {
 	padding-bottom: 14px;
 	background: url(img/wrap-bottom960.png) no-repeat left bottom;
 }
+
+
 

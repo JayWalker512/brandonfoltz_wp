@@ -1,32 +1,57 @@
-<? get_header() ?>
+<? 
+define('WP_USE_THEMES', false);
+get_header(); 
+?>
 
 <div id="wrap">
 	<div id="wrap-btm">
 		<div id="main">
 			<div id="content">
-			<div class="post">
-				<h2>some title text</h2>
-				<img src="<?php echo get_stylesheet_directory_uri() ?>/img/hexapic2.png" width="300" height="224" class="aright" title="Photo by Matt Catron" alt="Office Photo"/>
-				<p>nifty body text</p>
+				<!-- <div class="post">
+					<h2>some title text</h2>
+					<img src="<? echo get_stylesheet_directory_uri() ?>/img/hexapic2.png" width="300" height="224" class="aright" title="Photo by Matt Catron" alt="Office Photo"/>
+					<p>nifty body text</p>
+				</div> <!-- end of post -->
+			
+				<div class="clearer"></div> 
 
-				<!-- thinking the above section and the "news" sections should be in separate "post" type divs. 
-				and then separated with a "clearer" type div as below. Speaking of that, define a "clearer" class	
-				in style.css as below. -->
+				<!-- let's start the loop here for now. -->
+				<? $postCount = 0; ?>
+				<? if ( have_posts() ) : while ( have_posts() ) : the_post(); $postCount++; ?>
 
-				<div style="clear: both;">&nbsp;</div> 
-
-				<h2>News</h2>
+				<div class="post">
+					<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+					<div class="meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></div>
+					<div class="entry">
+					<? the_content() ?>
+					</div>
+					<? if ( is_page() == False ) : ?>
+					<div class="footer">
+					<span>Posted in <? the_category(', ') ?></span>
+					</div>
+					<? endif; ?>
+				</div>
+				
+				<? if ( is_single() == False && 
+				is_page() == False &&
+				$postCount < sizeof($posts) ) : ?>
 				<div class="separator"></div>
-				<p>news goes here</p>
-			</div>
+				<? endif; ?>
+			
+				<? endwhile; else: ?>
+				<div class="post">
+					<p>Sorry, no posts matched your criteria.</p>
+				</div>
+				<? endif; ?>
+				<!-- end of loop -->
+			
 			</div> <!-- end of content -->
 		
 			<!-- start sidebar -->
-			<div id="sidepanel">
-				<? get_sidebar() ?>
-			</div> <!-- end sidebar -->
+			<? get_sidebar() ?>
+			<!-- end sidebar -->
 		
-		<div style="clear: both;">&nbsp;</div>
+		<div class="clearer"></div>
 		
 		</div> <!-- end of main -->
 	

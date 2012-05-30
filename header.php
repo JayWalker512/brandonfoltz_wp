@@ -19,8 +19,11 @@
 
 <div id="header">
 	<div id="navigation">
-		<ul>
-			<li><a href="">Nav items here</a></li>
-		</ul>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 
+										'sort_column' => 'menu_order', 
+										'container_class' => 'menu-header' ) ) ?>
+		<span class="loginout-link">
+		<? echo wp_loginout("", True) ?>
+		</span>
 	</div> <!-- end of navigation -->
 </div> <!-- end of header -->
