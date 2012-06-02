@@ -417,6 +417,12 @@ input, textarea, select {
 	border: 1px solid #545454;*/
 }
 
+.comment-author {
+	padding: 6px;
+	background: #333333;
+	border: 1px solid #545454;
+}
+
 
 /*Wrappers for page encapsulation images*/
 
