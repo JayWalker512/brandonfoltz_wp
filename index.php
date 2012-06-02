@@ -21,10 +21,15 @@ get_header();
 
 				<div class="post">
 					<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+					
+					<? if ( is_page() == False ) : ?>
 					<div class="meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></div>
+					<? endif; ?>
+					
 					<div class="entry">
 					<? the_excerpt() ?>
 					</div>
+					
 					<? if ( is_page() == False ) : ?>
 					<div class="footer">
 					<span>Posted in <? the_category(', ') ?></span>

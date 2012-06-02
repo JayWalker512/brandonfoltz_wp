@@ -13,7 +13,7 @@
 <body>
 
 <div id="logo">
-	<h1><a href="#">Brandon Foltz</a></h1>
+	<h1><a href="<? bloginfo('url') ?>">Brandon Foltz</a></h1>
 	<h2>is a developer</h2>
 </div> <!-- end of logo -->
 

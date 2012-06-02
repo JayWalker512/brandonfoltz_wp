@@ -20,7 +20,7 @@ body {
 	color: #CCCCCC;
 }
 
-/* global link and p, ul, ol, heading styles */
+/* global link and p, ul, ol, heading, etc. styles */
 
 a:link, a:visited {
 	color: #48ACDE;
@@ -57,6 +57,12 @@ img.left {
 img.right {
 	float: right;
 	margin-left: 12px;
+}
+
+input, textarea {
+	background: #333333;
+	color: #CCCCCC;
+	border: 1px solid #545454;
 }
 
 /* custom alignments */
@@ -215,7 +221,7 @@ img.right {
 .separator {
 	margin: 16px 16px 8px 16px;
 	border-top: 1px dashed #333333;
-}
+}list-style: none;
 
 .cat-item {
 	margin: 0px 0px 0px 0px;
@@ -264,7 +270,7 @@ input, textarea, select {
 }
 
 
-#sidepanel h1, h2, h3 {
+#sidepanel h1, h2, h3 { /* includes widgettitle (s) */
 	height: 22px;
 	margin-bottom: 6px;
 	padding: 4px 0 4px 0px;
@@ -273,37 +279,14 @@ input, textarea, select {
 	color: #CCCCCC;
 }
 
+.widget {
+	list-style: none;
+}
+
 /*Search and Input Boxes*/
 
-#search {
-}
-
-#search h2 {
-	margin-bottom: 0px;
-}
-/*
-#s {
-	width: 110px;
-	margin-right: 0px;
-	padding: 2px;
-	border: 1px solid #545454;
-	background: #333333;
-}
-*/
-.button {
-	padding: 3px;
-	border: none;
-	background: #333333;
-	text-transform: lowercase;
-	font-size: 13px;
-	color: #CCCCCC;
-}
-
-/* Input boxes */
-.text_input {
-	background: #333333;
-	color: #CCCCCC;
-	border: 1px solid #545454;
+#searchform {
+	margin-bottom: 12px;
 }
 
 /*Footer*/
