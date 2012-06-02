@@ -67,19 +67,19 @@ input, textarea {
 
 /* custom alignments */
 
-.aleft {
+.alignleft {
 	margin-right: 12px;
 	margin-top: 6px;
 	float: left;
 }
 
-.aright {
+.alignright {
 	margin-left: 12px;
 	margin-top: 6px;
 	float: right;
 }
 
-.amiddle {
+.aligncenter {
 	vertical-align: middle;
 }
 
@@ -157,7 +157,7 @@ input, textarea {
 #navigation a {
 	/*display: block;*/
 	float: left;
-	margin-right: 0px;
+	margin-right: 16px;
 	margin-left: 16px;
 	/*padding: 10px 0px;*/
 	text-decoration: none;
@@ -200,7 +200,18 @@ input, textarea {
 }
 
 .post p {
-	margin-bottom: 4px;
+	margin-bottom: 12px;
+}
+
+.post ul, ol {
+	margin-bottom: 12px;
+}
+
+.post li {
+	margin: 0 0 0px 0;
+	/*margin: 0px;*/
+	list-style: none;
+	line-height: 24px;
 }
 
 .post .title h2 {
@@ -221,7 +232,7 @@ input, textarea {
 .separator {
 	margin: 16px 16px 8px 16px;
 	border-top: 1px dashed #333333;
-}list-style: none;
+}
 
 .cat-item {
 	margin: 0px 0px 0px 0px;
@@ -287,6 +298,14 @@ input, textarea, select {
 
 #searchform {
 	margin-bottom: 12px;
+}
+
+#s {
+	width: 60%;
+}
+
+.screen-reader-text {
+	display: none;
 }
 
 /*Footer*/
@@ -356,7 +375,7 @@ input, textarea, select {
 	float: right;
 	padding-left: 0px;
 	border-left: 1px solid #333333;
-	padding-right: 16px;
+	margin-right: 0px;
 }
 
 /* comment form(s) */
