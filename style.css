@@ -4,7 +4,7 @@ Theme URI: http://www.brandonfoltz.com
 Author: Brandon Foltz
 Author URI: http://www.brandonfoltz.com
 Description: Conversion of brandonfoltz.com into a Wordpress theme.
-Version: 1.0
+Version: 0.5
 License: MIT
 License URI: license.txt
 Tags: dark, blue, awesome
@@ -37,7 +37,7 @@ h1, h2, h3 {
 }
 
 p , ul, ol {
-	margin: 0 0 24px 0;
+	margin: 0 0 0px 0;
 	/*margin: 0px;*/
 	text-align: justify;
 	line-height: 24px;
@@ -309,6 +309,11 @@ ul.no-dot {
 	border-top: 1px dashed #333333;
 }
 
+.cat-item {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
 /* Form */
 
 form {
@@ -341,21 +346,21 @@ input, textarea, select {
 }
 
 #sidepanel ul {
-	margin: 0;
+	margin: 0 0 12px 0;
 	padding: 0;
 	list-style: none;
 }
 
 #sidepanel li {
-	margin-bottom: 32px;
+	margin-bottom: 0px;
 }
 
-#sidepanel li ul {
+/*#sidepanel li ul {
 }
 
 #sidepanel li li {
 	margin: 0;
-}
+}*/
 
 #sidepanel h1, h2, h3 {
 	height: 22px;
@@ -472,6 +477,50 @@ input, textarea, select {
 	border-left: 1px solid #333333;
 	padding-right: 16px;
 }
+
+/* comment form(s) */
+
+#respond {
+	
+}
+
+#respond p {
+	
+}
+
+#respond .comment-notes {
+	
+}
+
+#respond .required {
+	color: #48ACDE;
+	margin-bottom: 100px;
+}
+
+#respond .form-allowed-tags {
+	font-size: 10px;
+	line-height: 10px;
+	margin-bottom: 12px;
+}
+
+#respond input {
+	background: #333333;
+	color: #CCCCCC;
+}
+
+/* the actually comment form textarea */
+#comment {
+	width: 100%;
+	background: #333333;
+	color: #CCCCCC;
+	margin-bottom: 0px;
+}
+
+/* comments */
+.commentlist li {
+	margin-bottom: 12px;
+}
+
 
 /*Wrappers for page encapsulation images*/
 

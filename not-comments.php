@@ -1,0 +1,3 @@
+<?
+echo "This does nothing!";
+?>

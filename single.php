@@ -23,7 +23,7 @@ get_header();
 					<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					<div class="meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></div>
 					<div class="entry">
-					<? the_excerpt() ?>
+					<? the_content() ?>
 					</div>
 					<? if ( is_page() == False ) : ?>
 					<div class="footer">
@@ -32,11 +32,19 @@ get_header();
 					<? endif; ?>
 				</div>
 				
-				<? if ( is_single() == False && 
-				is_page() == False &&
-				$postCount < sizeof($posts) ) : ?>
 				<div class="separator"></div>
-				<? endif; ?>
+				
+				<div class="post">
+				<? 
+				/*$comment_form_args = array(
+					'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
+					);
+				comment_form($comment_form_args);*/
+				
+				$withcomments=1;
+				comments_template();
+				?>
+				</div>
 			
 				<? endwhile; else: ?>
 				<div class="post">
