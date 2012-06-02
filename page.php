@@ -7,13 +7,6 @@ get_header();
 	<div id="wrap-btm">
 		<div id="main">
 			<div id="content">
-				<!-- <div class="post">
-					<h2>some title text</h2>
-					<img src="<? echo get_stylesheet_directory_uri() ?>/img/hexapic2.png" width="300" height="224" class="aright" title="Photo by Matt Catron" alt="Office Photo"/>
-					<p>nifty body text</p>
-				</div> <!-- end of post -->
-			
-				<div class="clearer"></div> 
 
 				<!-- let's start the loop here for now. -->
 				<? $postCount = 0; ?>

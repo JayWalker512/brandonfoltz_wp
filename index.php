@@ -7,14 +7,7 @@ get_header();
 	<div id="wrap-btm">
 		<div id="main">
 			<div id="content">
-				<!-- <div class="post">
-					<h2>some title text</h2>
-					<img src="<? echo get_stylesheet_directory_uri() ?>/img/hexapic2.png" width="300" height="224" class="aright" title="Photo by Matt Catron" alt="Office Photo"/>
-					<p>nifty body text</p>
-				</div> <!-- end of post -->
 			
-				<div class="clearer"></div> 
-
 				<!-- let's start the loop here for now. -->
 				<? $postCount = 0; ?>
 				<? if ( have_posts() ) : while ( have_posts() ) : the_post(); $postCount++; ?>
@@ -49,6 +42,19 @@ get_header();
 				</div>
 				<? endif; ?>
 				<!-- end of loop -->
+				
+				<!-- in case you didn't notice, the general "post" class is used 
+				for just about anything that needs to be aligned properly inside
+				the content div. -->
+				<div class="separator"></div>
+				<div class="post">
+				<span class="alignleft"><? 
+				next_posts_link('&laquo; Older Entries', 0); 
+				?></span>
+				<span class="alignright"><?
+				previous_posts_link('Newer Entries &raquo;', 0);
+				?></span>
+				</div>
 			
 			</div> <!-- end of content -->
 		

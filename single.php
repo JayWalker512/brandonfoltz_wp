@@ -7,13 +7,6 @@ get_header();
 	<div id="wrap-btm">
 		<div id="main">
 			<div id="content">
-				<!-- <div class="post">
-					<h2>some title text</h2>
-					<img src="<? echo get_stylesheet_directory_uri() ?>/img/hexapic2.png" width="300" height="224" class="aright" title="Photo by Matt Catron" alt="Office Photo"/>
-					<p>nifty body text</p>
-				</div> <!-- end of post -->
-			
-				<div class="clearer"></div> 
 
 				<!-- let's start the loop here for now. -->
 				<? $postCount = 0; ?>
@@ -36,15 +29,23 @@ get_header();
 					
 				</div>
 				
+				<!-- in case you didn't notice, the general "post" class is used 
+				for just about anything that needs to be aligned properly inside
+				the content div. -->
+				<div class="separator"></div>
+				<div class="post">
+				<span class="alignright"><? 
+				next_post_link();
+				?></span>
+				<span class="alignleft"><?
+				previous_post_link();
+				?></span>
+				</div>
+				<div class="clearer"></div>
 				<div class="separator"></div>
 				
 				<div class="post">
 				<? 
-				/*$comment_form_args = array(
-					'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
-					);
-				comment_form($comment_form_args);*/
-				
 				$withcomments=1;
 				comments_template();
 				?>
