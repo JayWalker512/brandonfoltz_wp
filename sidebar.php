@@ -1,4 +1,5 @@
-<div id="sidepanel">
+<div id="sidebar1">
+<div class="sidebar">
 <?php if ( !function_exists('dynamic_sidebar')
         || !dynamic_sidebar() ) : ?>
         
@@ -15,6 +16,7 @@
 <? endif; ?>
 
 <? wp_meta() ?>
+</div>
 </div>
 
 			

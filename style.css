@@ -253,24 +253,24 @@ input, textarea, select {
 
 /*Side panel (sidebar) */
 
-#sidepanel {
+#sidebar1 {
 	float: left;
 	width: 210px;
 	padding-left: 16px;
 }
 
-#sidepanel ul {
+
+.sidebar ul {
 	margin: 0 0 12px 0;
 	padding: 0;
 	list-style: none;
 }
 
-#sidepanel li {
+.sidebar li {
 	margin-bottom: 0px;
 }
 
-
-#sidepanel h1, h2, h3 { /* includes widgettitle (s) */
+.sidepbar h1, h2, h3 { /* includes widgettitle (s) */
 	height: 22px;
 	margin-bottom: 6px;
 	padding: 4px 0 4px 0px;
