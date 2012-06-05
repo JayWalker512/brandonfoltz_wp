@@ -26,6 +26,11 @@ get_header();
 					<? if ( is_page() == False ) : ?>
 					<div class="footer">
 					<span>Posted in <? the_category(', ') ?></span>
+					<span class="alignright">
+					<img src="<? echo get_bloginfo( 'stylesheet_directory' )."/img/comments4.png"; ?>"/>
+					&nbsp;
+					<a href="<? comments_link()?>"><? comments_number(); ?></a>
+					</span>
 					</div>
 					<? endif; ?>
 				</div>
