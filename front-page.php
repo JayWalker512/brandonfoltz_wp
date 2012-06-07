@@ -4,7 +4,8 @@ get_header();
 
 <!-- this page is incredibly hacked together, as far as getting the separators 
 to show in the proper location, as well as displaying static content and recent
-posts. Geez Wordpress, y u so weird? -->
+posts. Geez Wordpress, y u so weird? This should be more like index.php in 
+structure (if possible) but right now stuff is all over the place. -->
 
 <div id="wrap">
 	<div id="wrap-btm">
@@ -37,6 +38,7 @@ posts. Geez Wordpress, y u so weird? -->
 				<? if ( have_posts() ) : while ( have_posts() ) : the_post(); $postCount++; ?>
 
 				<div class="post">
+				<div class="clearer"></div>
 				<div class="separator"></div> 
 					<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					
@@ -50,7 +52,7 @@ posts. Geez Wordpress, y u so weird? -->
 					
 					<? if ( is_page() == False ) : ?>
 					<div class="footer">
-					<span>Posted in <? the_category(', ') ?></span>
+					<span class="alignleft">Posted in <? the_category(', ') ?></span>
 					<span class="alignright">
 					<img src="<? echo get_bloginfo( 'stylesheet_directory' )."/img/comments4.png"; ?>"/>
 					&nbsp;

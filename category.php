@@ -34,7 +34,7 @@ get_header();
 					
 					<? if ( is_page() == False ) : ?>
 					<div class="footer">
-					<span>Posted in <? the_category(', ') ?></span>
+					<span class="alignleft">Posted in <? the_category(', ') ?></span>
 					<span class="alignright">
 					<img src="<? echo get_bloginfo( 'stylesheet_directory' )."/img/comments4.png"; ?>"/>
 					&nbsp;
@@ -47,6 +47,7 @@ get_header();
 					<? if ( is_single() == False && 
 					is_page() == False &&
 					$postCount < sizeof($posts) ) : ?>
+					<div class="clearer"></div>
 					<div class="separator"></div>
 					<? endif; ?>
 					
