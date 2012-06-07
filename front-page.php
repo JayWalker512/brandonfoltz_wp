@@ -7,7 +7,9 @@ get_header();
 	<div id="wrap-btm">
 		<div id="main">
 			<div id="content">
-
+				<? echo "This is the front page!"; ?>
+			
+			
 				<!-- let's start the loop here for now. -->
 				<? $postCount = 0; ?>
 				<? if ( have_posts() ) : while ( have_posts() ) : the_post(); $postCount++; ?>
@@ -15,55 +17,31 @@ get_header();
 				<div class="post">
 					<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					
+					<? if ( is_page() == False ) : ?>
 					<div class="meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></div>
+					<? endif; ?>
 					
 					<div class="entry">
-					<? the_content() ?>
+					<? the_excerpt() ?>
 					</div>
 					
 					<? if ( is_page() == False ) : ?>
 					<div class="footer">
 					<span>Posted in <? the_category(', ') ?></span>
+					<span class="alignright">
+					<img src="<? echo get_bloginfo( 'stylesheet_directory' )."/img/comments4.png"; ?>"/>
+					&nbsp;
+					<a href="<? comments_link()?>"><? comments_number(); ?></a>
+					</span>
 					</div>
 					<? endif; ?>
-					
 				</div>
 				
-				<!-- in case you didn't notice, the general "post" class is used 
-				for just about anything that needs to be aligned properly inside
-				the content div. -->
+				<? if ( is_single() == False && 
+				is_page() == False &&
+				$postCount < sizeof($posts) ) : ?>
 				<div class="separator"></div>
-				<div class="post">
-				<span class="alignright"><? 
-				next_post_link();
-				?></span>
-				<span class="alignleft"><?
-				previous_post_link();
-				?></span>
-				</div>
-				
-				<!-- google ad -->
-				<center><script type="text/javascript"><!--
-				google_ad_client = "ca-pub-6838771997101702";
-				/* brandonfoltz comment ad */
-				google_ad_slot = "6003873166";
-				google_ad_width = 468;
-				google_ad_height = 60;
-				//-->
-				</script>
-				<script type="text/javascript"
-				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-				</script></center>
-
-				<div class="clearer"></div>
-				<div class="separator"></div>
-				
-				<div class="post">
-				<? 
-				$withcomments=1;
-				comments_template();
-				?>
-				</div>
+				<? endif; ?>
 			
 				<? endwhile; else: ?>
 				<div class="post">
@@ -71,6 +49,19 @@ get_header();
 				</div>
 				<? endif; ?>
 				<!-- end of loop -->
+				
+				<!-- in case you didn't notice, the general "post" class is used 
+				for just about anything that needs to be aligned properly inside
+				the content div. -->
+				<div class="separator"></div>
+				<div class="post">
+				<span class="alignleft"><? 
+				next_posts_link('&laquo; Older Entries', 0); 
+				?></span>
+				<span class="alignright"><?
+				previous_posts_link('Newer Entries &raquo;', 0);
+				?></span>
+				</div>
 			
 			</div> <!-- end of content -->
 		
