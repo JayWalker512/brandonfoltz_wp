@@ -2,11 +2,6 @@
 get_header(); 
 ?>
 
-<!-- this page is incredibly hacked together, as far as getting the separators 
-to show in the proper location, as well as displaying static content and recent
-posts. Geez Wordpress, y u so weird? This should be more like index.php in 
-structure (if possible) but right now stuff is all over the place. -->
-
 <div id="wrap">
 	<div id="wrap-btm">
 		<div id="main">
@@ -30,16 +25,17 @@ structure (if possible) but right now stuff is all over the place. -->
 				<div class="post">
 				<h2>Recent Posts</h2>
 				</div>
+				<div class="clearer"></div>
+				<div class="separator"></div> 
 				<!-- let's start the (second) loop (for posts) here for now. -->
 				<? 
+				$local_posts_per_page = 4;
+				query_posts('posts_per_page=5&post_type=post&posts_per_page='.$local_posts_per_page);
 				$postCount = 0; 
-				query_posts('post_type=post') //fixes the issue of posts not showing
 				?>
 				<? if ( have_posts() ) : while ( have_posts() ) : the_post(); $postCount++; ?>
 
 				<div class="post">
-				<div class="clearer"></div>
-				<div class="separator"></div> 
 					<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					
 					<? if ( is_page() == False ) : ?>
@@ -61,10 +57,11 @@ structure (if possible) but right now stuff is all over the place. -->
 					</div>
 					<? endif; ?>
 				</div>
-			
-				<? //if ( $postCount < sizeof($posts) ) : //seems like a hackish fix ?>
-				<!-- <div class="separator"></div> -->
-				<? //endif; ?>
+				<? if ( $postCount < $local_posts_per_page ) : 
+				?>
+				<div class="clearer"></div>
+				<div class="separator"></div> 
+				<? endif; ?>
 			
 				<? endwhile; else: ?>
 				<div class="post">
