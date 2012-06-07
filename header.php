@@ -1,3 +1,4 @@
+<? define('WP_USE_THEMES', false); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
