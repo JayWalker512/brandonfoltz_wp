@@ -195,6 +195,13 @@ input, textarea {
 	padding-right: 16px; 
 }
 
+.post h1 {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	-webkit-margin-before: 0.0em;
+	-webkit-margin-after: 0.0em;
+}
+
 .post .entry {
 	padding: 4px 0 0 0;
 }
@@ -329,21 +336,30 @@ input, textarea, select {
 	margin: 0 auto;
 }
 
-#footer ul {
-	margin: 0;
+.menu-footer {
+	margin: 0 auto;
+	margin-bottom: 12px;
+}
+
+.menu-footer ul {
+	margin: 0 auto;
+	padding: 0;
 	padding-top: 12px;
 	list-style: none;
 	line-height: normal;
 	text-decoration: none;
+	text-align: center;
 }
 
-#footer li {
+.menu-footer li {
 	display: inline;
+	margin-right: 8px;
+	margin-right: 8px;
 }
 
 #footer a {
 	/*display: block;*/
-	margin-right: 10px;
+	margin-right: 0px;
 	margin-bottom: 0px;
 	text-decoration: none;
 	/*text-transform: lowercase;*/
@@ -351,9 +367,10 @@ input, textarea, select {
 	color:#48ACDE;
 }
 
-#footer p {
+#menu-footer p {
 	margin-bottom: 0px;
 }
+
 
 #footer a:hover { 
 	text-decoration: underline; 
@@ -364,7 +381,7 @@ input, textarea, select {
 	/*clear: both;*/
 	text-align: center;
 	color: #888888;
-	margin: 0px;
+	margin: 0;
 	padding: 0px;
 }
 

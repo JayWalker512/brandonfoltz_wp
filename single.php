@@ -6,7 +6,7 @@ get_header();
 	<div id="wrap-btm">
 		<div id="main">
 			<div id="content">
-
+				
 				<!-- let's start the loop here for now. -->
 				<? $postCount = 0; ?>
 				<? if ( have_posts() ) : while ( have_posts() ) : the_post(); $postCount++; ?>

@@ -21,7 +21,8 @@ if ( function_exists('register_sidebar') )
 
 /* Register custom header menu. */    
 register_nav_menus( array(
-	'primary' => 'Primary Navigation'
+	'primary' => 'Primary Navigation',
+	'secondary' => 'Footer Navigation'
 ) );
 
 ?>

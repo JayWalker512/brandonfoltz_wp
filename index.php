@@ -6,7 +6,6 @@ get_header();
 	<div id="wrap-btm">
 		<div id="main">
 			<div id="content">
-			
 				<!-- let's start the loop here for now. -->
 				<? $postCount = 0; ?>
 				<? if ( have_posts() ) : while ( have_posts() ) : the_post(); $postCount++; ?>
@@ -33,12 +32,14 @@ get_header();
 					</div>
 					<? endif; ?>
 				</div>
-				
 				<? if ( is_single() == False && 
 				is_page() == False &&
-				$postCount < sizeof($posts) ) : ?>
+				$postCount < sizeof($posts) &&
+				$postCount > 1 ) : ?>
 				<div class="clearer"></div> <!-- maybe separator should automatically clear? -->
 				<div class="separator"></div>
+				<? else: ?> <!-- fix for the separator showing incorrectly -->
+				<div class="clearer"></div>
 				<? endif; ?>
 			
 				<? endwhile; else: ?>
@@ -51,7 +52,7 @@ get_header();
 				<!-- in case you didn't notice, the general "post" class is used 
 				for just about anything that needs to be aligned properly inside
 				the content div. -->
-				<div class="separator"></div>
+				<!--<div class="separator"></div>--> <!-- need better testing for when separator should show -->
 				<div class="post">
 				<span class="alignleft"><? 
 				next_posts_link('&laquo; Older Entries', 0); 

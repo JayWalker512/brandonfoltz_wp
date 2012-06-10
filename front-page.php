@@ -21,7 +21,8 @@ get_header();
 
 				</div>				
 				<? endwhile; endif; ?>
-
+				<div class="clearer"></div>
+				<div class="separator"></div>
 				<div class="post">
 				<h2>Recent Posts</h2>
 				</div>
@@ -65,7 +66,7 @@ get_header();
 			
 				<? endwhile; else: ?>
 				<div class="post">
-					<p>Sorry, no posts matched your criteria.</p>
+					<p>No posts to display!</p>
 				</div>
 				<? endif; ?>
 				<!-- end of loop -->
