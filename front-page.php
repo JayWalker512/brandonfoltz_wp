@@ -32,6 +32,7 @@ get_header();
 				<? 
 				$local_posts_per_page = 4;
 				query_posts('posts_per_page=5&post_type=post&posts_per_page='.$local_posts_per_page);
+				$numPosts = count(get_posts());
 				$postCount = 0; 
 				?>
 				<? if ( have_posts() ) : while ( have_posts() ) : the_post(); $postCount++; ?>
@@ -58,7 +59,9 @@ get_header();
 					</div>
 					<? endif; ?>
 				</div>
-				<? if ( $postCount < $local_posts_per_page ) : 
+				<? 
+				
+				if ( $postCount < $numPosts ) : 
 				?>
 				<div class="clearer"></div>
 				<div class="separator"></div> 

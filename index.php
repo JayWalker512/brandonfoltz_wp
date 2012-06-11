@@ -35,7 +35,7 @@ get_header();
 				<? if ( is_single() == False && 
 				is_page() == False &&
 				$postCount < sizeof($posts) &&
-				$postCount > 1 ) : ?>
+				$postCount >= 1 ) : ?>
 				<div class="clearer"></div> <!-- maybe separator should automatically clear? -->
 				<div class="separator"></div>
 				<? else: ?> <!-- fix for the separator showing incorrectly -->
