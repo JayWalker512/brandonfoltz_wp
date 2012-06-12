@@ -65,6 +65,13 @@ input, textarea {
 	border: 1px solid #545454;
 }
 
+blockquote {
+	background: #333333;
+	color: #CCCCCC;
+	border: 1px solid #545454;
+	padding: 6px 6px 0px 6px;
+}
+
 /* custom alignments */
 
 .alignleft {
@@ -203,7 +210,7 @@ input, textarea {
 }
 
 .post .entry {
-	padding: 4px 0 0 0;
+	padding: 6px 0 0 0;
 }
 
 .post p {
@@ -237,7 +244,7 @@ input, textarea {
 }
 
 .separator {
-	width: 85%;
+	width: 95%;
 	margin: auto;
 	margin: 16px auto 8px auto;
 	border-top: 1px dashed #333333;
