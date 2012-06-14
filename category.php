@@ -46,9 +46,12 @@ get_header();
 					<!-- separator needs to be inside "post" div to display proper -->
 					<? if ( is_single() == False && 
 					is_page() == False &&
-					$postCount < sizeof($posts) ) : ?>
-					<div class="clearer"></div>
+					$postCount < sizeof($posts) &&
+					$postCount >= 1 ) : ?>
+					<div class="clearer"></div> <!-- maybe separator should automatically clear? -->
 					<div class="separator"></div>
+					<? else: ?> <!-- fix for the separator showing incorrectly -->
+					<div class="clearer"></div>
 					<? endif; ?>
 					
 				</div>
