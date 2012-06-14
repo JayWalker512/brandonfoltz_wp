@@ -41,6 +41,7 @@ get_header();
 				?></span>
 				</div>
 				
+				<br/><br/>
 				<!-- google ad -->
 				<center><script type="text/javascript"><!--
 				google_ad_client = "ca-pub-6838771997101702";
