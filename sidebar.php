@@ -1,8 +1,10 @@
 <div id="sidebar1">
 <div class="sidebar">
+<ul>
 <?php if ( !function_exists('dynamic_sidebar')
         || !dynamic_sidebar() ) : ?>
-        
+</ul>        
+
 <h3>Archives</h3>
 <ul>
 	<? wp_get_archives( array( 'type' => 'monthly' ) ); ?>
