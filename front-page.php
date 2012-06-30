@@ -61,7 +61,7 @@ get_header();
 				</div>
 				<? 
 				
-				if ( $postCount < $numPosts ) : 
+				if (( $postCount < $numPosts ) && ( $postCount < $local_posts_per_page)) : 
 				?>
 				<div class="clearer"></div>
 				<div class="separator"></div> 

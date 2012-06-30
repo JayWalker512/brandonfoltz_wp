@@ -52,7 +52,11 @@ get_header();
 				<!-- in case you didn't notice, the general "post" class is used 
 				for just about anything that needs to be aligned properly inside
 				the content div. -->
-				<!--<div class="separator"></div>--> <!-- need better testing for when separator should show -->
+				<? if ( get_next_posts_link() != "" || get_previous_posts_link() != "" ) 
+				{
+					echo "<div class=\"separator\"></div>";
+				}
+				?>
 				<div class="post">
 				<span class="alignleft"><? 
 				next_posts_link('&laquo; Older Entries', 0); 
