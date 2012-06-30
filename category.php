@@ -14,8 +14,8 @@ get_header();
 					if ( ! empty( $category_description ) )
 						echo '<p>' . $category_description . '<p>';
 				?>
-				<div class="separator"></div>
 				</div>
+				<div class="separator"></div>
 			
 				<!-- let's start the loop here for now. -->
 				<? $postCount = 0; ?>
@@ -42,21 +42,15 @@ get_header();
 					</span>
 					</div>
 					<? endif; ?>
+				</div>	
 					
-					<!-- separator needs to be inside "post" div to display proper -->
-					<? if ( is_single() == False && 
-					is_page() == False &&
-					$postCount < sizeof($posts) &&
-					$postCount >= 1 ) : ?>
-					<div class="clearer"></div> <!-- maybe separator should automatically clear? -->
-					<div class="separator"></div>
-					<? else: ?> <!-- fix for the separator showing incorrectly -->
-					<div class="clearer"></div>
-					<? endif; ?>
-					
-				</div>
+				<? if ( $postCount < sizeof($posts) ) : ?>
+				<div class="clearer"></div> <!-- maybe separator should automatically clear? -->
+				<div class="separator"></div>
+				<? else: ?> <!-- fix for the separator showing incorrectly -->
+				<div class="clearer"></div>
+				<? endif; ?>
 				
-			
 				<? endwhile; else: ?>
 				<div class="post">
 					<p>Sorry, no posts matched your criteria.</p>
@@ -67,7 +61,7 @@ get_header();
 				<!-- in case you didn't notice, the general "post" class is used 
 				for just about anything that needs to be aligned properly inside
 				the content div. -->
-				<div class="separator"></div>
+				<!--<div class="separator"></div>-->
 				<div class="post">
 				<span class="alignleft"><? 
 				next_posts_link('&laquo; Older Entries', 0); 
