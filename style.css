@@ -255,6 +255,12 @@ blockquote {
 	padding: 0px 0px 0px 0px;
 }
 
+.comment-count-link {
+	margin-left: 12px;
+	margin-top: 6px;
+	float: right;
+}
+
 /* Form */
 
 form {

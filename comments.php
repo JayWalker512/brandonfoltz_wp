@@ -78,6 +78,16 @@ and I like this layout, so ctrl-c, ctrl-v it is.
 <p><input type="text" name="url" id="url" value="<?php echo  esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 <label for="url"><small><?php _e('Website'); ?></small></label></p>
 
+<!-- math comment spam protection -->
+<?php if ( function_exists('math_comment_spam_protection') ) {
+$mcsp_info = math_comment_spam_protection();
+?> <p><input type="text" name="<?php echo $mcsp_info['fieldname_answer'] ?>" id="<?php echo $mcsp_info['fieldname_answer'] ?>" value="" size="22" tabindex="4" />
+<label for="<?php echo $mcsp_info['fieldname_answer'] ?>"><small>Spam protection: Sum of <?php echo $mcsp_info['operand1'] . ' + ' . $mcsp_info['operand2'] . ' ?' ?></small></label>
+<input type="hidden" name="<?php echo $mcsp_info['fieldname_hash'] ?>" value="<?php echo $mcsp_info['result']; ?>" />
+</p>
+<?php } // if function_exists... ?>
+<!-- end math comment spam protection -->
+
 <?php endif; ?>
 
 <!--<p><small><?php printf(__('<strong>XHTML:</strong> You can use these tags: <code>%s</code>'), allowed_tags()); ?></small></p>-->
