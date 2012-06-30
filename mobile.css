@@ -1,22 +1,5 @@
-/*
-Theme Name: brandonfoltz_wp
-Theme URI: http://www.brandonfoltz.com
-Author: Brandon Foltz
-Author URI: http://www.brandonfoltz.com
-Description: Conversion of brandonfoltz.com into a Wordpress theme.
-Version: 0.5
-License: MIT
-License URI: license.txt
-Tags: dark, blue, awesome
-*/
-
 body {
-	margin-top: 22px;
-	padding: 0;
-	background: #343434 url(img/bg1.jpg) repeat center top;
-	background-attachment: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
+	background: #000000;
 	color: #CCCCCC;
 }
 
@@ -74,7 +57,7 @@ blockquote {
 
 /* custom alignments */
 
-.alignleft {
+/*.alignleft {
 	margin-right: 12px;
 	margin-top: 6px;
 	float: left;
@@ -88,20 +71,17 @@ blockquote {
 
 .aligncenter {
 	vertical-align: middle;
-}
+}*/
 
 /*LOGO STUFF*/
 
 #logo {
-	width: 940px;
-	height: 60px;
 	margin: 0 auto;
 }
 
 #logo h1, #logo h2 {
-	float: left;
 	margin: 0;
-	padding: 0 0 0 20px;
+	padding: 0 0 0 0px;
 	line-height: normal;
 }
 
@@ -119,7 +99,7 @@ blockquote {
 #logo h1 a:hover { text-decoration: underline; }
 
 #logo h2 {
-	padding: 20px 0 0 6px;
+	padding: 0px 0 0 0px;
 	font: italic 14px Georgia, "Times New Roman", Times, serif;
 	color: #48ACDE;
 }
@@ -131,22 +111,11 @@ blockquote {
 
 #logo p a:hover { text-decoration: underline; }
 
-/* header, menu, navigation */
-
-#header {
-	clear: both;
-	width: 960px;
-	height: 52px;
-	margin: 0 auto;
-	/*background: url(images/img02.jpg) no-repeat left top;*/
-}
+/* nav */
 
 #navigation {
-	float: left;
-	width: 960px;
-	height: 54px;
-	background: url(img/nav960.png) no-repeat left top;
 	padding: 10px 0px 0px 0px;
+	margin-bottom: 12px;
 }
 
 #navigation ul {
@@ -158,41 +127,11 @@ blockquote {
 
 #navigation li {
 	/*display: block;*/
-	float: left;
+	/*float: left;*/
 }
 
-#navigation a {
-	/*display: block;*/
-	float: left;
-	margin-right: 16px;
-	margin-left: 16px;
-	/*padding: 10px 0px;*/
-	text-decoration: none;
-	/*text-transform: lowercase;*/
-	font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
-	color: #CCCCCC;
-}
-
-#navigation a:hover { 
-	text-decoration: underline; 
-	color: #48ACDE;
-}
-
-#navigation .current_nav_item a {
-	color: #48ACDE;
-}
-
-/*main section*/
-
-#main {
-	width: 960px;
-	margin: 0 auto;
-	background: #000000;
-}
-
-#content {
-	float: right;
-	width: 738px;
+#sidebar1 {
+	display: none;
 }
 
 /* Posts */
@@ -247,7 +186,7 @@ blockquote {
 	width: 95%;
 	margin: auto;
 	margin: 16px auto 8px auto;
-	border-top: 1px dashed #333333;
+	border-top: 1px dashed #CCCCCC;
 }
 
 .cat-item {
@@ -276,132 +215,6 @@ input, textarea, select {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #CCCCCC;
-}
-
-/*Side panel (sidebar) */
-
-#sidebar1 {
-	float: left;
-	width: 200px;
-	padding-left: 16px;
-}
-
-
-.sidebar ul {
-	margin: 0 0 12px 0;
-	padding: 0;
-	list-style: none;
-}
-
-.sidebar li {
-	margin-bottom: 0px;
-}
-
-.sidepbar h1, h2, h3 { /* includes widgettitle (s) */
-	height: 22px;
-	margin-bottom: 6px;
-	padding: 4px 0 4px 0px;
-	/*height: 32px;
-	font-size: 18px;*/
-	color: #CCCCCC;
-}
-
-.widget {
-	list-style: none;
-}
-
-/*Search and Input Boxes*/
-
-#searchform {
-	margin-bottom: 12px;
-}
-
-#s {
-	width: 60%;
-}
-
-.screen-reader-text {
-	display: none;
-}
-
-/*Footer*/
-
-#footer {
-	margin: 0 auto;
-	margin-top: 22px;
-	height: 32px;
-	min-height: 32px;
-	padding: 0;
-	font-size: 10px;
-	text-align: center;
-}
-
-#footer-wrap {
-	width: 960px;
-	height: 128px;
-	font-size: 10px;
-	margin: 0 auto;
-}
-
-.menu-footer {
-	margin: 0 auto;
-	margin-bottom: 12px;
-}
-
-.menu-footer ul {
-	margin: 0 auto;
-	padding: 0;
-	padding-top: 12px;
-	list-style: none;
-	line-height: normal;
-	text-decoration: none;
-	text-align: center;
-}
-
-.menu-footer li {
-	display: inline;
-	margin-right: 8px;
-	margin-right: 8px;
-}
-
-#footer a {
-	/*display: block;*/
-	margin-right: 0px;
-	margin-bottom: 0px;
-	text-decoration: none;
-	/*text-transform: lowercase;*/
-	font: 10px; /*"Trebuchet MS", Arial, Helvetica, sans-serif;*/
-	color:#48ACDE;
-}
-
-#menu-footer p {
-	margin-bottom: 0px;
-}
-
-
-#footer a:hover { 
-	text-decoration: underline; 
-	color: #48ACDE;
-}
-
-.legal {
-	/*clear: both;*/
-	text-align: center;
-	color: #888888;
-	margin: 0;
-	padding: 0px;
-}
-
-.clearer {
-	clear: both;
-}
-
-.loginout-link {
-	height: 20px;
-	float: right;
-	padding-left: 0px;
-	border-left: 1px solid #333333;
-	margin-right: 0px;
 }
 
 /* comment form(s) */
@@ -467,19 +280,3 @@ input, textarea, select {
 	background: #333333;
 	border: 1px solid #545454;
 }
-
-
-/*Wrappers for page encapsulation images*/
-
-#wrap {
-	width: 960px;
-	margin: 0 auto;
-	padding-top: 14px;
-	background: url(img/wrap-top960.png) no-repeat left top;
-}
-
-#wrap-btm {
-	padding-bottom: 14px;
-	background: url(img/wrap-bottom960.png) no-repeat left bottom;
-}
-

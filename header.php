@@ -3,9 +3,17 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width" />
 <title><?php wp_title(); ?> <?php bloginfo( 'name' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen" />
+
+<!-- normal stylesheet -->
+<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen and (min-device-width: 481px)" />
+
+<!-- mobile stylesheet(s) -->
+<link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 480px)" href="<?php bloginfo( 'stylesheet_directory' ); ?>/mobile.css" />
+<link type="text/css" rel="stylesheet" media="handheld" href="<?php bloginfo( 'stylesheet_directory' ); ?>/mobile.css" />
+
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
