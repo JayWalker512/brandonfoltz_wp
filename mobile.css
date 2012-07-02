@@ -120,6 +120,7 @@ blockquote {
 #navigation {
 	padding: 10px 16px 0px 16px;
 	margin-bottom: 24px;
+	font-size: 24px;
 }
 
 #navigation ul {
@@ -187,10 +188,10 @@ blockquote {
 }
 
 .separator {
-	width: 95%;
+	/*width: 90%;*/
 	margin: auto;
-	margin: 16px auto 8px auto;
-	border-top: 1px dashed #CCCCCC;
+	margin: 16px 16px 8px 16px;
+	border-top: 1px solid #999999;
 }
 
 .cat-item {
