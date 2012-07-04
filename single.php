@@ -27,6 +27,7 @@ get_header();
 					<? if ( is_page() == False ) : ?>
 					<div class="footer">
 					<span>Posted in <? the_category(', ') ?></span>
+					<span class="tags-list"><? the_tags( $before, $sep=", ", $after ); ?></span>
 					</div>
 					<? endif; ?>
 					

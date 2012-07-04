@@ -243,6 +243,10 @@ blockquote {
 	margin: 8px 0 8px 0;
 }
 
+.post .footer .tags-list {
+	margin-left: 6px;
+}
+
 .separator {
 	width: 95%;
 	margin: auto;

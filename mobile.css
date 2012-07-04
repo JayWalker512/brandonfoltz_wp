@@ -205,6 +205,11 @@ blockquote {
 	display: block;
 }
 
+.post .footer .tags-list {
+	margin-top: 6px;
+	display: block;
+}
+
 /* Form */
 
 form {
