@@ -20,6 +20,10 @@ get_header();
 					<? the_content() ?>
 					</div>
 					
+					<!-- for images that extend beyond text. We want them to
+					display nicely and not run over stuff. -->
+					<div class="clearer"></div>
+					
 					<? if ( is_page() == False ) : ?>
 					<div class="footer">
 					<span>Posted in <? the_category(', ') ?></span>
