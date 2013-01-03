@@ -38,7 +38,10 @@
 
 <div id="logo">
 	<h1><a href="<? bloginfo('url') ?>">Brandon Foltz</a></h1>
-	<h2>is a developer</h2>
+	<? require_once 'RandomQuote.class.php';
+	$headerquote = new RandomQuote();
+	$quoteFilePath = get_bloginfo('stylesheet_directory').'/headerquotes';
+	echo "<h2>".$headerquote->GetQuote($quoteFilePath)."</h2>"; ?>
 </div> <!-- end of logo -->
 
 <div id="header">
