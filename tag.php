@@ -8,12 +8,7 @@ get_header();
 		<div id="main">
 			<div id="content">
 				<div class="post">
-				<h2 class="title"><? echo '<span>' . single_cat_title( '', false ) . '</span>'; ?></h2>
-				<?
-					$category_description = category_description();
-					if ( ! empty( $category_description ) )
-						echo '<p>' . $category_description . '<p>';
-				?>
+				<h2 class="title"><? echo '<span>' . single_tag_title() . '</span>'; ?></h2>
 				</div>
 				<div class="separator"></div>
 			
